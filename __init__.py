@@ -1,8 +1,8 @@
 import os
-from .LoadImageTif import LoadImageTif, get_hello
+from .LoadImageTif import LoadImageTif, preview_tiff
 
 NODE_CLASS_MAPPINGS = {
-    "Load Image (with tif support)" : LoadImageTif,
+    "Load TIFF" : LoadImageTif,
 }
 
 WEB_DIRECTORY = "js"

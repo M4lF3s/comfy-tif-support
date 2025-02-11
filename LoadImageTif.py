@@ -74,10 +74,7 @@ class LoadImageTif:
         return {"required":
                     {
                         "Upload": ("CUSTOM", {
-                            "image_upload": True,
-                            "file_types": ["tif", "tiff"],
-                            "mime_types": ["image/tiff"],
-                            "update_preview": True
+                            "files": files,
                         }),
                         #"image": (sorted(files), {
                         #    "image_upload": True,
