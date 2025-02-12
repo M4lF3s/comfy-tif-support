@@ -73,7 +73,7 @@ class LoadImageTif:
                  and f.lower().endswith(('.tif', '.tiff'))]
         return {"required":
                     {
-                        "Upload": ("CUSTOM", {
+                        "image": ("TIFF_INPUT", {
                             "files": files,
                         }),
                         #"image": (sorted(files), {

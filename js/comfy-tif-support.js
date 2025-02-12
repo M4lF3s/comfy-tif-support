@@ -5,19 +5,9 @@ app.registerExtension({
 	name: "comfy-tif-support",
 	async setup() {},
 
-	async beforeRegisterNodeDef(nodeType, nodeData, app) {
-		if (nodeType.comfyClass=="Load Image (with tif support)") {
-			const onConnectionsChange = nodeType.prototype.onConnectionsChange;
-			nodeType.prototype.onConnectionsChange = function (side,slot,connect,link_info,output) {
-				const r = onConnectionsChange?.apply(this, arguments);
-				return r;
-			};
-		}
-	},
-
 	async getCustomWidgets(app) {
 		return {
-					CUSTOM(node, inputName, inputData, app) {
+					TIFF_INPUT(node, inputName, inputData, app) {
 						const imageWidget = node.addWidget('combo', "image", [], () => {}, {
 							values:  inputData[1].files
 						});
